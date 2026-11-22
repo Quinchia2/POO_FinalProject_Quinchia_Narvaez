@@ -54,6 +54,27 @@ Is charging required? (true/false): true
 [Decision support] Optimal spot found: Spot E-02 (Electric charging station)
 Ticket T-1001 Issued successfully
 Entry time: 2026-11-22 14:00
+
+---Smart parking system - Main menu---
+1. Register vehicle entry
+2. Process vehicle exit & payment
+3. View occupied parking spots
+4. Generate csv daily report
+5. Exit system
+Select an option: 2
+
+--Vehicle exit & payment--
+Enter ticket ID or license plate: ABC-123
+Entry time: 2026-11-22 14:00
+Exit time: 2026-11-22 16:30
+Total duration: 2 hours 30 mins (Billed as 3 hours)
+Vehicle Type: Electric vehicle (Base rate: $5.000/h x 1.2 multiplier)
+
+Total fee calculated: $18.000
+Select payment method (1. Cash, 2. Credit card, 3. Transfer): 2
+Processing payment... Succes
+Spot E-02 is now VACANT
+Receipt PAY-5001 generated succesfully
 ```
 
 ---
