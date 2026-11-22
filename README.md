@@ -46,12 +46,14 @@ Select an option: 1
 
 --Vehicle entry registration--
 Enter license plate: ABC-123
+Enter brand: Tesla
+Enter color: Red
 Select vehicle type (1. Car, 2. Motorcycle, 3. Electric vehicle): 3
-Enter battery capacity (Kwh): 75.0
 Is charging required? (true/false): true
 
 [Decision support] Optimal spot found: Spot E-02 (Electric charging station)
-Ticket T-1001 Issued successfully Entry time: 2026-11-22 14:00
+Ticket T-1001 Issued successfully
+Entry time: 2026-11-22 14:00
 ```
 
 ---
