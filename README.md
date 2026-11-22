@@ -31,3 +31,31 @@ Este sistema de gestión interna diseñado para que los operadores y administrad
    ```bash
    java -cp bin ui.Main
    ```
+---
+
+## Ejemplo de entrada / salida
+
+```text
+---Smart parking system - Main menu---
+1. Register vehicle entry
+2. Process vehicle exit & payment
+3. View occupied parking spots
+4. Generate csv daily report
+5. Exit system
+Select an option: 1
+
+--Vehicle entry registration--
+Enter license plate: ABC-123
+Select vehicle type (1. Car, 2. Motorcycle, 3. Electric vehicle): 3
+Enter battery capacity (Kwh): 75.0
+Is charging required? (true/false): true
+
+[Decision support] Optimal spot found: Spot E-02 (Electric charging station)
+Ticket T-1001 Issued successfully Entry time: 2026-11-22 14:00
+```
+
+---
+
+## Diagrama de clases
+
+```mermaid
