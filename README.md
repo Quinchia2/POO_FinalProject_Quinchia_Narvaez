@@ -80,6 +80,7 @@ Receipt PAY-5001 generated succesfully
 ---
 
 ## Diagrama de clases
+```mermaid
 classDiagram
     direction TB
     class Vehicle {
@@ -108,14 +109,14 @@ class Motorcycle {
         +Motorcycle()
         +hasHelmetLockerRequested() boolean
         +setHelmetLockerRequested(boolean requested) void
-}
+    }
 
 class ElectricVehicle {
         -boolean requiresCharging
         +ElectricVehicle()
         +requiresCharging() boolean
         +setRequiresCharging(boolean charging) void
-}
+    }
 
 class ParkingSpot {
         -String spotId
@@ -126,5 +127,5 @@ class ParkingSpot {
         +isOccupied() boolean
         +setOccupied(boolean occupied) void
         +isWide() boolean
-}
-```mermaid
+    }
+```
