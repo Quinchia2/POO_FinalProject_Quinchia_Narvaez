@@ -155,7 +155,7 @@ class Customer {
        +getEmail() String
    }
 
-Class Payment {
+class Payment {
        -String paymentId
        -double amount
        -LocalDateTime paymentDate
