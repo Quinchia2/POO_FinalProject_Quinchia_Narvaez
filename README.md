@@ -182,4 +182,17 @@ class ParkingLot {
        +findOptimalSpot() ParkingSpot
        +calculateOccupancyRate() double
    }
+   Vehicle <|-- Car
+   Vehicle <|-- Motorcycle
+   Car <|-- ElectricVehicle
+
+   ParkingLot "1"*--¨*" ParkingSpot : manages
+   ParkingLot "1"*--"*" ParkingTicket : registers
+   ParkingLot "1"*--"*" Payment : collects
+   ParkingLot "1"*--"*" Customer : stores
+
+   ParkingTicket "*" --> "1" Vehicle : vehicle
+   ParkingTicket "*" --> "1" ParkingSpot : spot
+   ParkingTicket "*" --> "1" Customer : customer
+   ParkingTicket "1" --> "0..1" Payment : payment
 ```
