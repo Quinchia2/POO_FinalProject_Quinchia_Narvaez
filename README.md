@@ -80,5 +80,49 @@ Receipt PAY-5001 generated succesfully
 ---
 
 ## Diagrama de clases
+class Vehicle {
+    <<abstract>>
+    #String licensePlate
+    #String brand
+    #String color
+    +Vehicle()
+    +getLicensePlate() String
+    +setLicensePlate(String licensePlate) void
+    +getBrand() String
+    +setBrand(String brand) void
+    +getColor() String
+    +setColor(String color) void
+}
 
+class Car {
+    -int doorsQuantity
+    +Car()
+    +getDoorsQuantity() int
+    +setDoorsQuantity(int doorsQuantity) void
+}
+
+class Motorcycle {
+    -boolean helmetLockerRequested
+    +Motorcycle()
+    +hasHelmetLockerRequested() boolean
+    +setHelmetLockerRequested(boolean requested) void
+}
+
+class ElectricVehicle {
+    -boolean requiresCharging
+    +ElectricVehicle()
+    +requiresCharging() boolean
+    +setRequiresCharging(boolean charging) void
+}
+
+class ParkingSpot {
+    -String spotId
+    -String spotType
+    -boolean occupied
+    -boolean isWide
+    +ParkingSpot()
+    +isOccupied() boolean
+    +setOccupied(boolean occupied) void
+    +isWide() boolean
+}
 ```mermaid
