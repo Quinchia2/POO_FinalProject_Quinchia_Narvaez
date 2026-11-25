@@ -128,4 +128,58 @@ class ParkingSpot {
         +setOccupied(boolean occupied) void
         +isWide() boolean
     }
+
+class ParkingTicket {
+       -String ticketId
+       -Vehicle vehicle
+       -ParkingSpot spot
+       -Customer customer
+       -LocalDateTime entryTime
+       -LocalDateTime exitTime
+       -String status
+       -double totalFee
+       -Payment payment
+       +ParkingTicket()
+       +calculateDurationInHours() double
+       +calculateTotalFee() double
+       +generatePayment() Payment
+   }
+
+class Customer {
+       -String cutomerId
+       -String name
+       -String email
+       +Customer()
+       +getCustomerId() String
+       +getName() String
+       +getEmail() String
+   }
+
+Class Payment {
+       -String paymentId
+       -double amount
+       -LocalDateTime paymentDate
+       -String paymentMethod
+       +Payment()
+       +getPaymentId() String
+       +getAmount() double
+       +getPaymentDate() LocalDateTime
+       +setPaymentMethod(String method) void
+   }
+
+class ParkingLot {
+       -String name
+       -double hourlyRate
+       -List~ParkingSpot~ spots
+       -List~ParkingTicket~ tickets
+       -List~Customer~ customers
+       -List~Payment~ payments
+       +ParkingLot()
+       +addSpot(ParkingSpot spot) void
+       +registerCustomer(Customer customer) void
+       +issueTicket() ParkingTicket
+       +processPayment() Payment
+       +findOptimalSpot() ParkingSpot
+       +calculateOccupancyRate() double
+   }
 ```
