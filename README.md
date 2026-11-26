@@ -135,7 +135,6 @@ class ParkingTicket {
        -LocalDateTime exitTime
        -String status
        -double totalFee
-       -Payment payment
        +ParkingTicket()
        +calculateDurationInHours() double
        +calculateTotalFee() double
