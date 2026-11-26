@@ -191,7 +191,4 @@ class ParkingLot {
    ParkingTicket "*" --> "1" ParkingSpot : spot
    ParkingTicket "*" --> "1" Customer : customer
    ParkingTicket "1" --> "0..1" Payment : payment
-   ParkingTicket "*" --> "1" ParkingSpot : spot
-   ParkingTicket "*" --> "1" Customer : customer
-   ParkingTicket "1" --> "0..1" Payment : payment
 ```
