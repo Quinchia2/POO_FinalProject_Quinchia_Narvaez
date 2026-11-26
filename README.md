@@ -131,9 +131,6 @@ class ParkingSpot {
 
 class ParkingTicket {
        -String ticketId
-       -Vehicle vehicle
-       -ParkingSpot spot
-       -Customer customer
        -LocalDateTime entryTime
        -LocalDateTime exitTime
        -String status
@@ -146,7 +143,7 @@ class ParkingTicket {
    }
 
 class Customer {
-       -String cutomerId
+       -String customerId
        -String name
        -String email
        +Customer()
@@ -186,10 +183,10 @@ class ParkingLot {
    Vehicle <|-- Motorcycle
    Car <|-- ElectricVehicle
 
-   ParkingLot "1" -- "" ParkingSpot : manages
-   ParkingLot "1" -- "" ParkingTicket : registers
-   ParkingLot "1" -- "" Payment : collects
-   ParkingLot "1" -- "" Customer : stores
+   ParkingLot "1" *-- "*" ParkingSpot : manages
+   ParkingLot "1" *-- "*" ParkingTicket : registers
+   ParkingLot "1" *-- "*" Payment : collects
+   ParkingLot "1" *-- "*" Customer : stores
 
    ParkingTicket "*" --> "1" Vehicle : vehicle
    ParkingTicket "*" --> "1" ParkingSpot : spot
